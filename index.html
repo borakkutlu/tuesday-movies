@@ -1,0 +1,503 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Tuesday Movies</title>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Tuesday Movies">
+<meta name="theme-color" content="#14121a">
+<link rel="manifest" href="manifest.json">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="icon" type="image/png" href="icon-192.png">
+<style>
+:root {
+  --bg: #f6f4f1;
+  --surface: #ffffff;
+  --surface-2: #efebe6;
+  --text: #1c1a20;
+  --muted: #6b6672;
+  --border: #e2ddd6;
+  --accent: #c2410c;
+  --emagine: #b45309;
+  --emagine-soft: #fdf0dd;
+  --mjr: #1d4ed8;
+  --mjr-soft: #e3ebfd;
+  --shadow: 0 1px 2px rgba(0,0,0,.05), 0 4px 16px rgba(0,0,0,.06);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #14121a;
+    --surface: #1e1b26;
+    --surface-2: #2a2633;
+    --text: #f1eef5;
+    --muted: #a39dae;
+    --border: #353040;
+    --accent: #fb923c;
+    --emagine: #fbbf24;
+    --emagine-soft: #3a2c12;
+    --mjr: #7aa2ff;
+    --mjr-soft: #1a2647;
+    --shadow: 0 1px 2px rgba(0,0,0,.3), 0 6px 20px rgba(0,0,0,.3);
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #14121a; --surface: #1e1b26; --surface-2: #2a2633; --text: #f1eef5; --muted: #a39dae;
+  --border: #353040; --accent: #fb923c; --emagine: #fbbf24; --emagine-soft: #3a2c12;
+  --mjr: #7aa2ff; --mjr-soft: #1a2647; --shadow: 0 1px 2px rgba(0,0,0,.3), 0 6px 20px rgba(0,0,0,.3);
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font: 15px/1.45 -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  padding-bottom: env(safe-area-inset-bottom);
+}
+button, input, select { font: inherit; color: inherit; }
+.wrap { max-width: 1100px; margin: 0 auto; padding: 0 16px; }
+
+header { padding: calc(20px + env(safe-area-inset-top)) 0 8px; }
+h1 { margin: 0; font-size: 26px; letter-spacing: -.02em; }
+.sub { color: var(--muted); font-size: 13px; margin-top: 2px; }
+
+/* Tuesday tabs */
+.days { display: flex; gap: 8px; overflow-x: auto; padding: 14px 0 4px; scrollbar-width: none; }
+.days::-webkit-scrollbar { display: none; }
+.day {
+  flex: 0 0 auto; border: 1px solid var(--border); background: var(--surface);
+  border-radius: 12px; padding: 8px 14px; cursor: pointer; text-align: left;
+}
+.day b { display: block; font-size: 15px; }
+.day span { font-size: 12px; color: var(--muted); }
+.day[aria-pressed="true"] { background: var(--text); color: var(--bg); border-color: var(--text); }
+.day[aria-pressed="true"] span { color: inherit; opacity: .75; }
+
+/* Controls */
+.controls {
+  position: sticky; top: 0; z-index: 5; background: var(--bg);
+  display: flex; flex-wrap: wrap; gap: 8px; align-items: center; padding: 10px 0 12px;
+  border-bottom: 1px solid var(--border);
+}
+.seg { display: inline-flex; background: var(--surface-2); border-radius: 10px; padding: 3px; }
+.seg button {
+  border: 0; background: none; padding: 6px 11px; border-radius: 8px; cursor: pointer;
+  font-size: 13px; font-weight: 500; color: var(--muted); white-space: nowrap;
+}
+.seg button[aria-pressed="true"] { background: var(--surface); color: var(--text); box-shadow: var(--shadow); }
+.field {
+  display: inline-flex; align-items: center; gap: 6px; background: var(--surface-2);
+  border-radius: 10px; padding: 0 10px; height: 36px; font-size: 13px; color: var(--muted);
+}
+.field select, .field input { border: 0; background: none; outline: none; font-size: 14px; color: var(--text); }
+.field input { width: 140px; }
+.spacer { flex: 1; }
+
+.note { color: var(--muted); font-size: 13px; margin: 14px 0 0; }
+.summary { display: flex; gap: 14px; flex-wrap: wrap; margin: 14px 0 4px; font-size: 13px; color: var(--muted); }
+.dot { display: inline-block; width: 9px; height: 9px; border-radius: 50%; margin-right: 5px; vertical-align: 0; }
+.dot.emagine { background: var(--emagine); }
+.dot.mjr { background: var(--mjr); }
+
+/* Cards */
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 14px; padding: 14px 0 40px; }
+.card {
+  display: flex; gap: 14px; background: var(--surface); border: 1px solid var(--border);
+  border-radius: 16px; padding: 12px; cursor: pointer; box-shadow: var(--shadow);
+  transition: transform .12s ease;
+}
+.card:hover { transform: translateY(-2px); }
+.card:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.poster {
+  flex: 0 0 92px; width: 92px; height: 138px; border-radius: 10px; object-fit: cover;
+  background: var(--surface-2);
+}
+.poster.ph { display: flex; align-items: center; justify-content: center; font-size: 28px; color: var(--muted); }
+.card-body { min-width: 0; flex: 1; display: flex; flex-direction: column; gap: 6px; }
+.title { font-weight: 650; font-size: 16px; line-height: 1.25; margin: 0; }
+.meta { font-size: 12.5px; color: var(--muted); }
+.rating { display: inline-block; border: 1px solid var(--border); border-radius: 4px; padding: 0 4px; font-size: 11px; font-weight: 600; color: var(--text); margin-right: 4px; }
+.both { display: inline-block; font-size: 11px; font-weight: 600; color: var(--accent); margin-left: 6px; }
+.th-row { display: flex; gap: 8px; align-items: baseline; }
+.th-label { flex: 0 0 64px; font-size: 12px; font-weight: 600; }
+.th-label.emagine { color: var(--emagine); }
+.th-label.mjr { color: var(--mjr); }
+.times { display: flex; flex-wrap: wrap; gap: 5px; }
+.chip {
+  display: inline-flex; align-items: center; gap: 4px; font-size: 12.5px; font-weight: 600;
+  padding: 3px 8px; border-radius: 7px; font-variant-numeric: tabular-nums; text-decoration: none; color: var(--text);
+  white-space: nowrap;
+}
+.chip.emagine { background: var(--emagine-soft); }
+.chip.mjr { background: var(--mjr-soft); }
+.chip small { font-weight: 500; color: var(--muted); font-size: 10.5px; }
+.none { font-size: 12.5px; color: var(--muted); }
+
+/* Timeline */
+.timeline { padding: 14px 0 40px; }
+.tl-scroll { overflow-x: auto; background: var(--surface); border: 1px solid var(--border); border-radius: 16px; box-shadow: var(--shadow); }
+.tl { position: relative; min-width: 760px; padding: 0 12px 10px 0; }
+.tl-axis, .tl-row { display: grid; grid-template-columns: 170px 1fr; }
+.tl-axis { position: sticky; top: 0; height: 32px; border-bottom: 1px solid var(--border); }
+.tl-ticks { position: relative; }
+.tl-tick { position: absolute; top: 9px; font-size: 11.5px; color: var(--muted); transform: translateX(-50%); white-space: nowrap; }
+.tl-grid { position: absolute; top: 32px; bottom: 0; width: 1px; background: var(--border); }
+.tl-row { min-height: 52px; border-bottom: 1px solid var(--border); cursor: pointer; }
+.tl-row:last-child { border-bottom: 0; }
+.tl-row:hover { background: var(--surface-2); }
+.tl-name { padding: 8px 12px; font-size: 13px; font-weight: 600; line-height: 1.2; align-self: center; }
+.tl-name small { display: block; color: var(--muted); font-weight: 400; font-size: 11.5px; margin-top: 2px; }
+.tl-lanes { position: relative; padding: 6px 0; }
+.tl-bar {
+  position: absolute; height: 18px; border-radius: 5px; font-size: 11px; font-weight: 600;
+  padding: 0 6px; line-height: 18px; white-space: nowrap; overflow: hidden; color: #fff;
+}
+.tl-bar.emagine { background: var(--emagine); color: #1c1a20; }
+.tl-bar.mjr { background: var(--mjr); }
+:root[data-theme="dark"] .tl-bar.mjr { color: #0b1530; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .tl-bar.mjr { color: #0b1530; } }
+
+.empty { text-align: center; color: var(--muted); padding: 60px 16px; }
+.empty b { display: block; color: var(--text); font-size: 17px; margin-bottom: 4px; }
+
+/* Modal */
+dialog {
+  border: 0; padding: 0; width: min(720px, 100%); max-height: 92vh; border-radius: 20px;
+  background: var(--surface); color: var(--text); box-shadow: 0 20px 60px rgba(0,0,0,.4);
+}
+dialog::backdrop { background: rgba(10,8,14,.6); backdrop-filter: blur(3px); }
+.m-media { position: relative; background: #000; aspect-ratio: 16 / 9; }
+.m-media iframe, .m-media video { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+.m-media img { width: 100%; height: 100%; object-fit: cover; opacity: .55; }
+.m-media .notrailer { position: absolute; inset: auto 0 12px; text-align: center; color: #fff; font-size: 13px; }
+.m-close {
+  position: absolute; top: 10px; right: 10px; z-index: 2; width: 34px; height: 34px; border-radius: 50%;
+  border: 0; background: rgba(0,0,0,.6); color: #fff; font-size: 18px; cursor: pointer;
+}
+.m-body { padding: 18px 20px 22px; }
+.m-body h2 { margin: 0 0 4px; font-size: 22px; letter-spacing: -.01em; }
+.m-body p { margin: 10px 0; }
+.m-section { margin-top: 16px; }
+.m-section h3 { font-size: 12px; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); margin: 0 0 6px; }
+.tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.tag { background: var(--surface-2); border-radius: 999px; padding: 3px 10px; font-size: 12.5px; }
+.m-th { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 10px; padding: 10px 0; border-top: 1px solid var(--border); }
+.m-th:first-of-type { border-top: 0; }
+.m-th .th-label { flex-basis: 100%; font-size: 13px; }
+a.chip:hover { text-decoration: underline; }
+.links { display: flex; gap: 14px; flex-wrap: wrap; font-size: 13px; }
+.links a { color: var(--accent); }
+
+@media (max-width: 600px) {
+  h1 { font-size: 22px; }
+  .grid { grid-template-columns: 1fr; }
+  .field input { width: 100%; }
+  .field.search { flex: 1 1 100%; }
+  .spacer { display: none; }
+  dialog { max-height: 100vh; height: 100%; border-radius: 0; max-width: 100%; }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>Tuesday Movies</h1>
+    <div class="sub" id="updated"></div>
+    <div class="days" id="days" role="group" aria-label="Choose a Tuesday"></div>
+  </header>
+
+  <div class="controls">
+    <div class="seg" id="theaterSeg" role="group" aria-label="Theater"></div>
+    <label class="field">Starts after
+      <select id="after"></select>
+    </label>
+    <label class="field search">🔍
+      <input id="search" type="search" placeholder="Search movies" autocomplete="off">
+    </label>
+    <div class="spacer"></div>
+    <div class="seg" id="viewSeg" role="group" aria-label="View">
+      <button data-view="cards">Movies</button>
+      <button data-view="timeline">Timeline</button>
+    </div>
+  </div>
+
+  <div id="summary" class="summary"></div>
+  <main id="main"></main>
+</div>
+
+<dialog id="modal"></dialog>
+
+<script src="data.js"></script>
+<script>
+const DATA = window.MOVIE_DATA;
+const THEATERS = DATA.theaters.map(t => ({ ...t, cls: t.name.toLowerCase().includes("emagine") ? "emagine" : "mjr" }));
+const TH = Object.fromEntries(THEATERS.map(t => [t.id, t]));
+
+const store = {
+  get(k, d) { try { const v = localStorage.getItem("tm:" + k); return v === null ? d : JSON.parse(v); } catch { return d; } },
+  set(k, v) { try { localStorage.setItem("tm:" + k, JSON.stringify(v)); } catch {} },
+};
+
+const state = {
+  day: DATA.tuesdays[0],
+  theater: store.get("theater", "all"),
+  after: store.get("after", DATA.earliest),
+  view: store.get("view", "cards"),
+  q: "",
+};
+
+const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+const toMin = hhmm => { const [h, m] = hhmm.split(":").map(Number); return h * 60 + m; };
+const fmtTime = min => { min = ((min % 1440) + 1440) % 1440; const h = Math.floor(min / 60), m = min % 60; return `${h % 12 || 12}:${String(m).padStart(2, "0")} ${h < 12 ? "AM" : "PM"}`; };
+const fmtRuntime = r => r ? `${Math.floor(r / 60)}h ${String(r % 60).padStart(2, "0")}m` : "";
+const dayLabel = iso => new Date(iso + "T12:00").toLocaleDateString("en-US", { month: "short", day: "numeric" });
+
+// Showtimes for a movie on the selected day, after the time filter, per theater.
+function timesFor(movie, day = state.day) {
+  const out = {};
+  const byTh = movie.showtimes[day] || {};
+  for (const t of THEATERS) {
+    const list = (byTh[t.id] || []).filter(s => toMin(s.time) >= toMin(state.after));
+    if (list.length) out[t.id] = list;
+  }
+  return out;
+}
+
+function visibleMovies(day = state.day) {
+  const q = state.q.trim().toLowerCase();
+  return DATA.movies.filter(m => {
+    const times = timesFor(m, day);
+    const ids = Object.keys(times);
+    if (!ids.length) return false;
+    if (state.theater === "both" && ids.length < THEATERS.length) return false;
+    if (state.theater !== "all" && state.theater !== "both" && !times[state.theater]) return false;
+    if (q && !(m.title + " " + (m.details.cast || []).join(" ") + " " + (m.details.genres || []).join(" ")).toLowerCase().includes(q)) return false;
+    return true;
+  });
+}
+
+function shownTheaters(times) {
+  return THEATERS.filter(t => state.theater === "all" || state.theater === "both" || state.theater === t.id)
+    .map(t => ({ t, list: times[t.id] || [] }));
+}
+
+function metaLine(d) {
+  return [
+    d.rating ? `<span class="rating">${esc(d.rating)}</span>` : "",
+    [fmtRuntime(d.runtime), (d.genres || []).slice(0, 3).join(", ")].filter(Boolean).map(esc).join(" · "),
+  ].join("");
+}
+
+function posterHtml(d, cls = "poster") {
+  return d.poster
+    ? `<img class="${cls}" src="${esc(d.poster)}" alt="" loading="lazy" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'${cls} ph',textContent:'🎬'}))">`
+    : `<div class="${cls} ph">🎬</div>`;
+}
+
+function chip(s, t, withLink = false) {
+  const inner = `${fmtTime(toMin(s.time))}${s.format ? ` <small>${esc(s.format)}</small>` : ""}`;
+  return withLink && s.ticket_url
+    ? `<a class="chip ${t.cls}" href="${esc(s.ticket_url)}" target="_blank" rel="noopener">${inner}</a>`
+    : `<span class="chip ${t.cls}">${inner}</span>`;
+}
+
+/* ---------- Render ---------- */
+
+function renderDays() {
+  const el = document.getElementById("days");
+  el.innerHTML = DATA.tuesdays.map(d => {
+    const n = visibleMovies(d).length;
+    return `<button class="day" data-day="${d}" aria-pressed="${d === state.day}"><b>Tue, ${dayLabel(d)}</b><span>${n} movie${n === 1 ? "" : "s"}</span></button>`;
+  }).join("");
+}
+
+function renderControls() {
+  const seg = document.getElementById("theaterSeg");
+  const opts = [["all", "All"], ...THEATERS.map(t => [t.id, t.short]), ["both", "At both"]];
+  seg.innerHTML = opts.map(([v, l]) => `<button data-theater="${v}" aria-pressed="${state.theater === v}">${esc(l)}</button>`).join("");
+
+  const sel = document.getElementById("after");
+  const choices = ["00:00", "12:00", "15:00", "17:00", "17:30", "18:00", "18:15", "18:30", "19:00", "19:30", "20:00", "21:00"];
+  if (!choices.includes(state.after)) choices.push(state.after);
+  sel.innerHTML = choices.sort().map(c => `<option value="${c}" ${c === state.after ? "selected" : ""}>${c === "00:00" ? "Any time" : fmtTime(toMin(c))}</option>`).join("");
+
+  document.querySelectorAll("#viewSeg button").forEach(b => b.setAttribute("aria-pressed", b.dataset.view === state.view));
+}
+
+function renderSummary(movies) {
+  const counts = THEATERS.map(t => `<span><span class="dot ${t.cls}"></span>${esc(t.short)}: ${movies.filter(m => timesFor(m)[t.id]).length}</span>`);
+  const both = movies.filter(m => Object.keys(timesFor(m)).length === THEATERS.length).length;
+  document.getElementById("summary").innerHTML =
+    `<span><b style="color:var(--text)">${movies.length}</b> movies</span>${counts.join("")}<span>At both: ${both}</span>`;
+}
+
+function emptyState() {
+  const isFirst = state.day === DATA.tuesdays[0];
+  return `<div class="empty"><b>No movies match</b>${
+    isFirst ? "Try an earlier start time or a different theater." : "Theaters usually post full schedules about a week ahead. Check back closer to the date."
+  }</div>`;
+}
+
+function renderCards(movies) {
+  if (!movies.length) return emptyState();
+  return `<div class="grid">${movies.map((m, i) => {
+    const times = timesFor(m);
+    const both = Object.keys(times).length === THEATERS.length;
+    const rows = shownTheaters(times).map(({ t, list }) => `
+      <div class="th-row"><div class="th-label ${t.cls}">${esc(t.short)}</div>
+        <div class="times">${list.length ? list.map(s => chip(s, t)).join("") : `<span class="none">Not playing</span>`}</div>
+      </div>`).join("");
+    return `<article class="card" tabindex="0" data-idx="${DATA.movies.indexOf(m)}">
+      ${posterHtml(m.details)}
+      <div class="card-body">
+        <h2 class="title">${esc(m.title)}${both && state.theater === "all" ? `<span class="both">● Both</span>` : ""}</h2>
+        <div class="meta">${metaLine(m.details)}</div>
+        ${rows}
+      </div>
+    </article>`;
+  }).join("")}</div>`;
+}
+
+function renderTimeline(movies) {
+  if (!movies.length) return emptyState();
+  const spans = [];
+  movies.forEach(m => Object.values(timesFor(m)).flat().forEach(s => {
+    const start = toMin(s.time);
+    spans.push(start, start + (m.details.runtime || 120));
+  }));
+  const lo = Math.floor(Math.min(...spans) / 60) * 60;
+  const hi = Math.ceil(Math.max(...spans) / 60) * 60;
+  const pct = min => ((min - lo) / (hi - lo)) * 100;
+
+  let ticks = "";
+  for (let t = lo; t <= hi; t += 60) {
+    ticks += `<div class="tl-tick" style="left:${pct(t)}%">${fmtTime(t).replace(":00", "")}</div>`;
+  }
+  const rows = movies.map(m => {
+    const times = timesFor(m);
+    const run = m.details.runtime || 120;
+    // Each theater gets its own lanes; showings that overlap in time stack onto extra lanes.
+    let lane = 0, bars = "";
+    for (const { t, list } of shownTheaters(times)) {
+      const laneEnds = [];
+      for (const s of list) {
+        const start = toMin(s.time);
+        let i = laneEnds.findIndex(end => end <= start);
+        if (i === -1) { i = laneEnds.length; laneEnds.push(0); }
+        laneEnds[i] = start + run;
+        const label = `${fmtTime(start)}${s.format ? " · " + s.format : ""}`;
+        bars += `<div class="tl-bar ${t.cls}" style="top:${6 + (lane + i) * 21}px;left:${pct(start)}%;width:${pct(start + run) - pct(start)}%" title="${esc(t.short)} · ${label} → ends ~${fmtTime(start + run)}">${esc(label)}</div>`;
+      }
+      lane += laneEnds.length;
+    }
+    return `<div class="tl-row" data-idx="${DATA.movies.indexOf(m)}">
+      <div class="tl-name">${esc(m.title)}<small>${esc(fmtRuntime(m.details.runtime))}</small></div>
+      <div class="tl-lanes" style="height:${12 + lane * 21}px">${bars}</div>
+    </div>`;
+  }).join("");
+
+  return `<div class="timeline"><div class="tl-scroll"><div class="tl">
+    <div class="tl-axis"><div></div><div class="tl-ticks">${ticks}</div></div>
+    ${rows}
+  </div></div>
+  <p class="note">Bars run from showtime to the approximate end (movie length, not counting previews).</p></div>`;
+}
+
+function render() {
+  renderDays();
+  renderControls();
+  const movies = visibleMovies();
+  renderSummary(movies);
+  document.getElementById("main").innerHTML = state.view === "timeline" ? renderTimeline(movies) : renderCards(movies);
+}
+
+/* ---------- Modal ---------- */
+
+function openMovie(idx) {
+  const m = DATA.movies[idx];
+  const d = m.details;
+  // YouTube refuses to embed on pages opened as a file, so fall back to the theater's video there.
+  const canEmbedYouTube = location.protocol.startsWith("http");
+  let media;
+  if (d.youtube && (canEmbedYouTube || !d.video)) {
+    media = `<iframe src="https://www.youtube-nocookie.com/embed/${esc(d.youtube)}?rel=0&playsinline=1" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen referrerpolicy="strict-origin-when-cross-origin" title="Trailer"></iframe>`;
+  } else if (d.video) {
+    media = `<video src="${esc(d.video)}" controls playsinline preload="metadata" ${d.poster ? `poster="${esc(d.poster)}"` : ""}></video>`;
+  } else {
+    media = `${d.poster ? `<img src="${esc(d.poster)}" alt="">` : ""}<div class="notrailer">No trailer available</div>`;
+  }
+
+  const allTimes = m.showtimes[state.day] || {};
+  const run = d.runtime;
+  const theaterBlocks = THEATERS.map(t => {
+    const list = allTimes[t.id] || [];
+    const chips = list.length
+      ? list.map(s => {
+          const start = toMin(s.time);
+          const dim = start < toMin(state.after) ? ' style="opacity:.45"' : "";
+          const end = run ? ` <small>→ ${fmtTime(start + run)}</small>` : "";
+          const inner = `${fmtTime(start)}${s.format ? ` <small>${esc(s.format)}</small>` : ""}${end}`;
+          return s.ticket_url
+            ? `<a class="chip ${t.cls}"${dim} href="${esc(s.ticket_url)}" target="_blank" rel="noopener">${inner}</a>`
+            : `<span class="chip ${t.cls}"${dim}>${inner}</span>`;
+        }).join("")
+      : `<span class="none">Not playing this Tuesday</span>`;
+    const link = m.links[t.id] || t.url;
+    return `<div class="m-th"><div class="th-label ${t.cls}">${esc(t.name)} · <a href="${esc(link)}" target="_blank" rel="noopener" style="color:inherit;font-weight:500">tickets ↗</a></div>${chips}</div>`;
+  }).join("");
+
+  const people = (label, list) => list && list.length
+    ? `<div class="m-section"><h3>${label}</h3><div class="tags">${list.map(p => `<span class="tag">${esc(p)}</span>`).join("")}</div></div>` : "";
+
+  const modal = document.getElementById("modal");
+  modal.innerHTML = `
+    <div class="m-media"><button class="m-close" aria-label="Close">✕</button>${media}</div>
+    <div class="m-body">
+      <h2>${esc(m.title)}</h2>
+      <div class="meta">${metaLine(d)}${d.release ? ` · Released ${esc(new Date(d.release + "T12:00").toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" }))}` : ""}</div>
+      ${d.synopsis ? `<p>${esc(d.synopsis)}</p>` : ""}
+      ${d.youtube ? `<div class="links"><a href="https://www.youtube.com/watch?v=${esc(d.youtube)}" target="_blank" rel="noopener">▶ Watch trailer on YouTube</a></div>` : ""}
+      ${people("Director", d.directors)}
+      ${people("Cast", d.cast)}
+      ${(d.genres || []).length ? `<div class="m-section"><h3>Genre</h3><div class="tags">${d.genres.map(g => `<span class="tag">${esc(g)}</span>`).join("")}</div></div>` : ""}
+      <div class="m-section"><h3>Showtimes · Tue, ${dayLabel(state.day)}</h3>${theaterBlocks}</div>
+    </div>`;
+  modal.querySelector(".m-close").onclick = () => modal.close();
+  modal.showModal();
+  modal.scrollTop = 0;
+}
+
+const modal = document.getElementById("modal");
+modal.addEventListener("click", e => { if (e.target === modal) modal.close(); });
+modal.addEventListener("close", () => { modal.innerHTML = ""; }); // stops trailer playback
+
+/* ---------- Events ---------- */
+
+document.addEventListener("click", e => {
+  const day = e.target.closest("[data-day]");
+  if (day) { state.day = day.dataset.day; return render(); }
+  const th = e.target.closest("[data-theater]");
+  if (th) { state.theater = th.dataset.theater; store.set("theater", state.theater); return render(); }
+  const view = e.target.closest("[data-view]");
+  if (view) { state.view = view.dataset.view; store.set("view", state.view); return render(); }
+  const item = e.target.closest("[data-idx]");
+  if (item && !e.target.closest("a")) openMovie(+item.dataset.idx);
+});
+document.addEventListener("keydown", e => {
+  const item = e.target.closest && e.target.closest(".card[data-idx]");
+  if (item && (e.key === "Enter" || e.key === " ")) { e.preventDefault(); openMovie(+item.dataset.idx); }
+});
+document.getElementById("after").addEventListener("change", e => { state.after = e.target.value; store.set("after", state.after); render(); });
+document.getElementById("search").addEventListener("input", e => { state.q = e.target.value; render(); });
+
+const updated = new Date(DATA.generated_at);
+document.getElementById("updated").textContent =
+  `${THEATERS.map(t => t.name).join(" & ")} · Updated ${updated.toLocaleString("en-US", { weekday: "short", month: "short", day: "numeric", hour: "numeric", minute: "2-digit" })}` +
+  (DATA.errors.length ? ` · ⚠️ ${DATA.errors.join("; ")}` : "");
+
+render();
+</script>
+</body>
+</html>
