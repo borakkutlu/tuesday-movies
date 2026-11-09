@@ -1,5 +1,5 @@
 window.MOVIE_DATA = {
- "generated_at": "2026-11-08T23:06",
+ "generated_at": "2026-11-08T23:20",
  "earliest": "18:15",
  "tuesdays": [
   "2026-11-10",
@@ -2561,3 +2561,4 @@ window.MOVIE_DATA = {
  ],
  "errors": []
 };
+if (!window.TM_PAGE && !/[?&]t=/.test(location.search)) location.replace(location.pathname + "?t=" + Date.now());
