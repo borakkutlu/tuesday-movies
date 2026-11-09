@@ -232,6 +232,17 @@ a.chip:hover { text-decoration: underline; }
 <script src="data.js"></script>
 <script>
 const DATA = window.MOVIE_DATA;
+
+// Hide Tuesdays that are already over (a Tuesday stays visible all day on the day itself).
+const localISO = d => `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
+const loadedOn = localISO(new Date());
+const upcoming = DATA.tuesdays.filter(d => d >= loadedOn);
+DATA.tuesdays = upcoming.length ? upcoming : DATA.tuesdays.slice(-1);
+// The home-screen app can stay open for days; reload when reopened on a new date.
+document.addEventListener("visibilitychange", () => {
+  if (document.visibilityState === "visible" && localISO(new Date()) !== loadedOn) location.reload();
+});
+
 const THEATERS = DATA.theaters.map(t => ({ ...t, cls: t.name.toLowerCase().includes("emagine") ? "emagine" : "mjr" }));
 const TH = Object.fromEntries(THEATERS.map(t => [t.id, t]));
 
