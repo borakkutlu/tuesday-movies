@@ -238,10 +238,18 @@ const localISO = d => `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2,
 const loadedOn = localISO(new Date());
 const upcoming = DATA.tuesdays.filter(d => d >= loadedOn);
 DATA.tuesdays = upcoming.length ? upcoming : DATA.tuesdays.slice(-1);
-// The home-screen app can stay open for days; reload when reopened on a new date.
-document.addEventListener("visibilitychange", () => {
-  if (document.visibilityState === "visible" && localISO(new Date()) !== loadedOn) location.reload();
-});
+// The home-screen app can stay open for days: whenever it's opened again (or every
+// 30 min while open), reload if the date changed or the page is over 30 min old.
+const loadedAt = Date.now();
+function refreshIfStale() {
+  if (document.visibilityState !== "visible") return;
+  if (localISO(new Date()) !== loadedOn || Date.now() - loadedAt > 30 * 60 * 1000) {
+    location.replace(location.pathname + "?t=" + Date.now());
+  }
+}
+document.addEventListener("visibilitychange", refreshIfStale);
+window.addEventListener("pageshow", e => { if (e.persisted) refreshIfStale(); });
+setInterval(refreshIfStale, 30 * 60 * 1000);
 
 const THEATERS = DATA.theaters.map(t => ({ ...t, cls: t.name.toLowerCase().includes("emagine") ? "emagine" : "mjr" }));
 const TH = Object.fromEntries(THEATERS.map(t => [t.id, t]));
