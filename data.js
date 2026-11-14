@@ -1,11 +1,11 @@
 window.MOVIE_DATA = {
- "generated_at": "2026-11-08T23:20",
+ "generated_at": "2026-11-13T20:14",
  "earliest": "18:15",
  "tuesdays": [
-  "2026-11-10",
   "2026-11-17",
   "2026-11-24",
-  "2026-12-01"
+  "2026-12-01",
+  "2026-12-08"
  ],
  "theaters": [
   {
@@ -23,83 +23,82 @@ window.MOVIE_DATA = {
  ],
  "movies": [
   {
-   "title": "A Christmas Story",
+   "title": "Behemoth!",
    "details": {
-    "poster": "https://cms-assets.webediamovies.pro/production/275/762fd0d164ad1f3bbdba15bb2127d38c.jpg",
-    "synopsis": "In the 1940's, in the town of Hammond, 9-year-old Ralphie wants one thing for Christmas -- an official Red Ryder BB rifle. When he asks his mother for the BB gun for Christmas, she says, \"No, you'll shoot your eye out\". When he writes an essay about it at school his teacher gives him a C+ with a note saying \"You'll shoot your eye out.\" Next he asks Santa for the gun, Santa's response is familiar, he says, \"You'll shoot your eye out, kid.\" Ralph fears that he'll never get the BB gun for Christmas. But there may be a surprise in store for him.",
-    "runtime": 94,
+    "poster": "https://www.emagine-entertainment.com/wp-content/uploads/2026/11/behemoth-poster.jpg",
+    "synopsis": "A gifted cellist, Alex Serian (Pedro Pascal), returns home to Los Angeles after 20 years on the road. \n Music, which has been the constant, all-consuming river of his life, begins to carry Alex on an adventure that will change him forever.",
+    "runtime": 127,
     "genres": [
-     "Comedy",
-     "Drama",
-     "Family"
+     "Drama"
     ],
-    "rating": "PG",
+    "rating": "R",
+    "youtube": "TrMGdrCJ5Ck",
+    "release": "2026-12-04",
     "cast": [
-     "Peter Billingsley",
-     "Melinda Dillon",
-     "Darren McGavin",
-     "Ian Petrella",
-     "Scott Schwartz",
-     "Tedde Moore"
+     "Pedro Pascal",
+     "Will Arnett",
+     "Eva Victor",
+     "Olivia Wilde",
+     "Hank Azaria",
+     "Alexa Swinton"
     ],
     "directors": [
-     "Bob Clark"
+     "Tony Gilroy"
     ],
-    "video": "https://m.boxoffice.media/mp4/13123_high.mp4",
-    "release": "1983-11-18"
+    "video": "https://m.boxoffice.media/mp4/389075_high.mp4"
    },
-   "links": {},
+   "links": {
+    "3674": "https://www.emagine-entertainment.com/movies/behemoth/"
+   },
    "showtimes": {
-    "2026-11-10": {
-     "X0TUX": [
+    "2026-12-08": {
+     "3674": [
       {
        "time": "13:00",
        "format": "",
-       "ticket_url": "https://booking.mjrtheatres.com/launch/ticketing/8aa1f2c3-7ff6-52cb-a597-bb3c1d06d60f"
+       "ticket_url": null
       },
       {
-       "time": "15:45",
+       "time": "16:00",
        "format": "",
-       "ticket_url": "https://booking.mjrtheatres.com/launch/ticketing/444e668b-f5aa-5b53-b61c-2e0c0eabc992"
+       "ticket_url": null
+      },
+      {
+       "time": "18:00",
+       "format": "",
+       "ticket_url": null
+      },
+      {
+       "time": "21:00",
+       "format": "",
+       "ticket_url": null
       }
-     ]
-    }
-   }
-  },
-  {
-   "title": "Aadarsha Kutumbam - House No. 47",
-   "details": {
-    "poster": "https://all.web.img.acsta.net/img/3f/6b/3f6be854392379cbf1aa201a7a247f76.jpg",
-    "synopsis": "A picture-perfect family at House No. 47 comes undone after an incident exposes long-hidden tensions. As secrets surface, each member must confront the truth behind their facade.",
-    "runtime": 150,
-    "genres": [
-     "Comedy",
-     "Thriller",
-     "Action",
-     "Family"
-    ],
-    "rating": "NR",
-    "cast": [
-     "Venkatesh Daggubati",
-     "Srinidhi Shetty",
-     "Nivetha Pethuraj",
-     "Nara Rohith",
-     "Pujita Ponnada",
-     "Udaybir Sandhu"
-    ],
-    "directors": [
-     "Trivikram Srinivas"
-    ],
-    "release": "2026-10-09"
-   },
-   "links": {},
-   "showtimes": {
-    "2026-11-10": {
+     ],
      "X0TUX": [
       {
-       "time": "14:20",
+       "time": "10:00",
        "format": "",
-       "ticket_url": "https://booking.mjrtheatres.com/launch/ticketing/0afdbf94-54ca-5104-9d29-2dd8a96204dd"
+       "ticket_url": "https://booking.mjrtheatres.com/launch/ticketing/7bfc55fb-6866-5bde-b515-c8a8346b30f6"
+      },
+      {
+       "time": "13:00",
+       "format": "",
+       "ticket_url": "https://booking.mjrtheatres.com/launch/ticketing/72d9aae0-12fa-50e3-959f-29aee54000a7"
+      },
+      {
+       "time": "16:00",
+       "format": "",
+       "ticket_url": "https://booking.mjrtheatres.com/launch/ticketing/6abfa885-b21e-5f87-a61c-d415e91f6475"
+      },
+      {
+       "time": "19:00",
+       "format": "",
+       "ticket_url": "https://booking.mjrtheatres.com/launch/ticketing/fe38ad6a-5d12-5c51-bf8a-30d43a15765b"
+      },
+      {
+       "time": "22:00",
+       "format": "",
+       "ticket_url": "https://booking.mjrtheatres.com/launch/ticketing/c58916f2-f30d-5d24-9018-d6cb02594942"
       }
      ]
     }
@@ -136,7 +135,120 @@ window.MOVIE_DATA = {
     "3674": "https://www.emagine-entertainment.com/movies/clayface/"
    },
    "showtimes": {
-    "2026-11-10": {
+    "2026-11-17": {
+     "3674": [
+      {
+       "time": "13:20",
+       "format": "",
+       "ticket_url": null
+      },
+      {
+       "time": "16:00",
+       "format": "",
+       "ticket_url": null
+      },
+      {
+       "time": "18:40",
+       "format": "",
+       "ticket_url": null
+      },
+      {
+       "time": "21:50",
+       "format": "",
+       "ticket_url": null
+      }
+     ],
+     "X0TUX": [
+      {
+       "time": "13:45",
+       "format": "",
+       "ticket_url": "https://booking.mjrtheatres.com/launch/ticketing/d5a507e7-8491-584b-90f3-10fd83fe471f"
+      },
+      {
+       "time": "16:30",
+       "format": "",
+       "ticket_url": "https://booking.mjrtheatres.com/launch/ticketing/ccb34da4-ab0d-58ff-bea6-27d8325f880f"
+      },
+      {
+       "time": "19:15",
+       "format": "",
+       "ticket_url": "https://booking.mjrtheatres.com/launch/ticketing/a539a798-09fe-5553-b5c9-f93fa57654cb"
+      },
+      {
+       "time": "22:00",
+       "format": "",
+       "ticket_url": "https://booking.mjrtheatres.com/launch/ticketing/98517d00-c145-5026-98f2-be3db55f2a8f"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "title": "Club Kid",
+   "details": {
+    "poster": "https://www.emagine-entertainment.com/wp-content/uploads/2026/11/club-kid-poster.jpg",
+    "synopsis": "A washed-up New York party promoter is forced to turn his life around when an unexpected visitor arrives.",
+    "runtime": 122,
+    "genres": [
+     "Comedy",
+     "Drama"
+    ],
+    "rating": "R",
+    "youtube": "guKEdb_iRXw",
+    "release": "2026-11-20",
+    "cast": [
+     "Jordan Firstman",
+     "Reggie Absolom",
+     "Diego Calva",
+     "Cara Delevingne",
+     "Saturn Risin9",
+     "Miss Benny"
+    ],
+    "directors": [
+     "Jordan Firstman"
+    ]
+   },
+   "links": {
+    "3674": "https://www.emagine-entertainment.com/movies/club-kid/"
+   },
+   "showtimes": {
+    "2026-11-24": {
+     "3674": [
+      {
+       "time": "14:00",
+       "format": "",
+       "ticket_url": null
+      },
+      {
+       "time": "18:00",
+       "format": "",
+       "ticket_url": null
+      },
+      {
+       "time": "21:00",
+       "format": "",
+       "ticket_url": null
+      }
+     ],
+     "X0TUX": [
+      {
+       "time": "14:00",
+       "format": "",
+       "ticket_url": "https://booking.mjrtheatres.com/launch/ticketing/8cc5bd7b-54b4-5225-a0a2-0c9ef87f4127"
+      },
+      {
+       "time": "18:45",
+       "format": "",
+       "ticket_url": "https://booking.mjrtheatres.com/launch/ticketing/e6ec8664-ff0b-5b0d-8cb0-c6ae7ae973c4"
+      },
+      {
+       "time": "21:40",
+       "format": "",
+       "ticket_url": "https://booking.mjrtheatres.com/launch/ticketing/4f3002b6-f23e-5d3d-b23b-1787a4a7adea"
+      }
+     ]
+    },
+    "2026-12-01": {
      "3674": [
       {
        "time": "13:00",
@@ -144,46 +256,46 @@ window.MOVIE_DATA = {
        "ticket_url": null
       },
       {
-       "time": "16:15",
+       "time": "15:45",
        "format": "",
        "ticket_url": null
       },
       {
-       "time": "18:50",
+       "time": "18:30",
        "format": "",
        "ticket_url": null
       },
       {
-       "time": "21:30",
+       "time": "21:25",
        "format": "",
        "ticket_url": null
       }
      ],
      "X0TUX": [
       {
-       "time": "10:40",
+       "time": "10:00",
        "format": "",
-       "ticket_url": "https://booking.mjrtheatres.com/launch/ticketing/663019a0-8df2-5548-bfd7-0a25e303f430"
+       "ticket_url": "https://booking.mjrtheatres.com/launch/ticketing/9f905d92-6d7a-5483-8a4a-1e821c146217"
       },
       {
-       "time": "13:25",
+       "time": "13:00",
        "format": "",
-       "ticket_url": "https://booking.mjrtheatres.com/launch/ticketing/59830ef9-a103-56e7-8aa7-8795ad6bdf47"
+       "ticket_url": "https://booking.mjrtheatres.com/launch/ticketing/3086018c-32dd-50f6-a431-b5bdec86e9ff"
       },
       {
-       "time": "16:10",
+       "time": "16:00",
        "format": "",
-       "ticket_url": "https://booking.mjrtheatres.com/launch/ticketing/1851bdd7-8a03-5865-8b06-2602407a6ac9"
+       "ticket_url": "https://booking.mjrtheatres.com/launch/ticketing/293059e4-3d90-52c0-9c9b-feca22e94e19"
       },
       {
-       "time": "18:50",
+       "time": "19:00",
        "format": "",
-       "ticket_url": "https://booking.mjrtheatres.com/launch/ticketing/13a38c8d-1021-54e5-ac2c-e6a9f5f514aa"
+       "ticket_url": "https://booking.mjrtheatres.com/launch/ticketing/899f4935-7777-5b1e-b59f-2fcf8a71d3a8"
       },
       {
-       "time": "21:30",
+       "time": "22:00",
        "format": "",
-       "ticket_url": "https://booking.mjrtheatres.com/launch/ticketing/022dac75-e2e3-553b-a182-b10ee1cd5a1a"
+       "ticket_url": "https://booking.mjrtheatres.com/launch/ticketing/64b03062-c143-5663-83d0-bc41ea9e531c"
       }
      ]
     }
@@ -277,6 +389,45 @@ window.MOVIE_DATA = {
    }
   },
   {
+   "title": "Dr. Seuss' How the Grinch Stole Christmas",
+   "details": {
+    "poster": "https://cms-assets.webediamovies.pro/production/275/012ba1a53dfa7b33b65fe133d480219d.jpg",
+    "synopsis": "The curmudgeonly recluse Grinch, who hates Christmas, becomes annoyed with the out-of-control Christmas festivities in Whoville, the town lying below his cave dwelling on Mt. Crumpit. But after the Grinch conspires to deprive the Who's of their favorite holiday by sneaking into town on Christmas eve to steal everything associated with the holiday, he learns that the spirit of Christmas goes much deeper than tinsel and toys.",
+    "runtime": 105,
+    "genres": [
+     "Family"
+    ],
+    "rating": "PG",
+    "cast": [
+     "Jim Carrey",
+     "Taylor Momsen",
+     "Jeffrey Tambor"
+    ],
+    "directors": [
+     "Ron Howard"
+    ],
+    "video": "https://m.boxoffice.media/mp4/403051_high.mp4",
+    "release": "2025-12-12"
+   },
+   "links": {},
+   "showtimes": {
+    "2026-12-08": {
+     "X0TUX": [
+      {
+       "time": "13:00",
+       "format": "",
+       "ticket_url": "https://booking.mjrtheatres.com/launch/ticketing/f6d1e9c3-f929-5a72-9360-092ecec26873"
+      },
+      {
+       "time": "18:45",
+       "format": "",
+       "ticket_url": "https://booking.mjrtheatres.com/launch/ticketing/afcf5ca1-857f-5fe1-ad28-61b5a06b19ae"
+      }
+     ]
+    }
+   }
+  },
+  {
    "title": "Dr. Seuss' The Grinch",
    "details": {
     "poster": "https://cms-assets.webediamovies.pro/production/275/6a2a0d2248737491fa00ac2b3784cb83.jpg",
@@ -307,14 +458,24 @@ window.MOVIE_DATA = {
     "2026-11-17": {
      "X0TUX": [
       {
+       "time": "10:15",
+       "format": "",
+       "ticket_url": "https://booking.mjrtheatres.com/launch/ticketing/93802f94-26fc-5e89-9787-e8966a5adbef"
+      },
+      {
        "time": "13:00",
        "format": "",
-       "ticket_url": "https://booking.mjrtheatres.com/launch/ticketing/b74c5acb-6eea-50cf-aecf-957b16a5a3dd"
+       "ticket_url": "https://booking.mjrtheatres.com/launch/ticketing/1d16f755-a244-50cc-948b-8fc0c52e358b"
+      },
+      {
+       "time": "15:45",
+       "format": "",
+       "ticket_url": "https://booking.mjrtheatres.com/launch/ticketing/c0f481a6-2b10-5ac1-afe6-e16c7c257aa8"
       },
       {
        "time": "18:30",
        "format": "",
-       "ticket_url": "https://booking.mjrtheatres.com/launch/ticketing/eed3fb4a-6100-555c-9373-8a2d133862b1"
+       "ticket_url": "https://booking.mjrtheatres.com/launch/ticketing/24e030e8-2cad-5712-8a33-a50f2ccb626f"
       }
      ]
     }
@@ -350,59 +511,39 @@ window.MOVIE_DATA = {
     "3674": "https://www.emagine-entertainment.com/movies/drummer-boy/"
    },
    "showtimes": {
-    "2026-11-10": {
+    "2026-11-17": {
      "3674": [
       {
-       "time": "13:00",
+       "time": "13:10",
        "format": "",
        "ticket_url": null
       },
       {
-       "time": "15:30",
+       "time": "16:00",
        "format": "",
        "ticket_url": null
       },
       {
-       "time": "18:30",
+       "time": "18:50",
        "format": "",
        "ticket_url": null
       }
      ],
      "X0TUX": [
       {
-       "time": "10:00",
+       "time": "10:30",
        "format": "",
-       "ticket_url": "https://booking.mjrtheatres.com/launch/ticketing/f42ec1ae-1952-5bbe-abe6-d0747739ed2b"
+       "ticket_url": "https://booking.mjrtheatres.com/launch/ticketing/158d2993-2d3c-5110-8aa1-c6b9f4905e2e"
       },
       {
-       "time": "11:15",
+       "time": "13:30",
        "format": "",
-       "ticket_url": "https://booking.mjrtheatres.com/launch/ticketing/4fdea07e-645c-5724-b3ed-2478dc1cf743"
+       "ticket_url": "https://booking.mjrtheatres.com/launch/ticketing/df6a329d-53ce-560b-83c8-e6ed83e8c0b3"
       },
       {
-       "time": "13:00",
+       "time": "16:30",
        "format": "",
-       "ticket_url": "https://booking.mjrtheatres.com/launch/ticketing/f3bc7b3b-a5d9-5a42-b7d7-632f8b61820f"
-      },
-      {
-       "time": "14:15",
-       "format": "",
-       "ticket_url": "https://booking.mjrtheatres.com/launch/ticketing/493cec13-710b-5923-859f-1c712f4cc82d"
-      },
-      {
-       "time": "16:00",
-       "format": "",
-       "ticket_url": "https://booking.mjrtheatres.com/launch/ticketing/6bebac26-2077-574a-b18a-d525876b4918"
-      },
-      {
-       "time": "19:00",
-       "format": "",
-       "ticket_url": "https://booking.mjrtheatres.com/launch/ticketing/2700ec00-7d7d-5b03-8339-b1734ae708bf"
-      },
-      {
-       "time": "22:00",
-       "format": "",
-       "ticket_url": "https://booking.mjrtheatres.com/launch/ticketing/38bf3683-f692-53bb-a575-caebfb6c21c6"
+       "ticket_url": "https://booking.mjrtheatres.com/launch/ticketing/6a84cccc-f3ae-5683-a588-8261610e77bd"
       }
      ]
     }
@@ -519,6 +660,11 @@ window.MOVIE_DATA = {
        "ticket_url": null
       },
       {
+       "time": "15:45",
+       "format": "",
+       "ticket_url": null
+      },
+      {
        "time": "17:15",
        "format": "",
        "ticket_url": null
@@ -530,6 +676,11 @@ window.MOVIE_DATA = {
       },
       {
        "time": "20:00",
+       "format": "",
+       "ticket_url": null
+      },
+      {
+       "time": "21:15",
        "format": "",
        "ticket_url": null
       }
@@ -686,79 +837,6 @@ window.MOVIE_DATA = {
    }
   },
   {
-   "title": "Everest: The Other Side",
-   "details": {
-    "poster": "https://all.web.img.acsta.net/img/ae/0b/ae0b8455375f2b72e7ef3b8f8e631734.jpg",
-    "synopsis": "Hilaree Nelson and Jim Morisson shared a dream to climb and ski Everest’s direct North Face, a feat no one had ever accomplished.",
-    "runtime": 115,
-    "genres": [
-     "Documentary"
-    ],
-    "rating": "PG-13",
-    "cast": [
-     "Jim Morrison",
-     "Jimmy Chin (III)",
-     "Pur Bahadur \"Yukta\" Gurung",
-     "Hilaree Nelson"
-    ],
-    "directors": [
-     "Jimmy Chin (III)",
-     "Elizabeth Chai Vasarhelyi"
-    ],
-    "video": "https://m.boxoffice.media/mp4/422457_high.mp4",
-    "release": "2026-10-30"
-   },
-   "links": {},
-   "showtimes": {
-    "2026-11-10": {
-     "X0TUX": [
-      {
-       "time": "10:15",
-       "format": "",
-       "ticket_url": "https://booking.mjrtheatres.com/launch/ticketing/129f4610-fb5b-5ca6-aca3-5e1cb32cc038"
-      }
-     ]
-    }
-   }
-  },
-  {
-   "title": "Fjord",
-   "details": {
-    "poster": "https://all.web.img.acsta.net/img/b9/59/b959519a35f38d4c5a1dfca547752f80.jpg",
-    "synopsis": "From two time Palm d'Or winner Cristian Mungiu, a Norwegian woman and her devout Romanian husband relocate with their five children to a remote, close-knit, coastal town. Their teenage children form a fast bond with a neighboring family as unease begins to simmer around their rigid beliefs. When allegations of abuse emerge, they are forced to confront a system of judgement that blurs the lines between concern and prejudice.",
-    "runtime": 146,
-    "genres": [
-     "Drama"
-    ],
-    "rating": "R",
-    "cast": [
-     "Sebastian Stan",
-     "Renate Reinsve",
-     "Lisa Carlehed",
-     "Vanessa Ceban",
-     "Henrikke Lund-Olsen",
-     "Jonathan Ciprian Breazu"
-    ],
-    "directors": [
-     "Cristian Mungiu"
-    ],
-    "video": "https://m.boxoffice.media/mp4/384752_high.mp4",
-    "release": "2026-10-09"
-   },
-   "links": {},
-   "showtimes": {
-    "2026-11-10": {
-     "X0TUX": [
-      {
-       "time": "17:50",
-       "format": "",
-       "ticket_url": "https://booking.mjrtheatres.com/launch/ticketing/59885ddf-2145-5f61-b682-41e785814b2c"
-      }
-     ]
-    }
-   }
-  },
-  {
    "title": "Focker-in-Law",
    "details": {
     "poster": "https://www.emagine-entertainment.com/wp-content/uploads/2026/10/focker-in-law-poster-600x948.jpg",
@@ -870,52 +948,6 @@ window.MOVIE_DATA = {
     "3674": "https://www.emagine-entertainment.com/movies/ghost-soldier/"
    },
    "showtimes": {
-    "2026-11-10": {
-     "3674": [
-      {
-       "time": "14:00",
-       "format": "",
-       "ticket_url": null
-      },
-      {
-       "time": "16:15",
-       "format": "",
-       "ticket_url": null
-      },
-      {
-       "time": "18:40",
-       "format": "",
-       "ticket_url": null
-      },
-      {
-       "time": "21:00",
-       "format": "",
-       "ticket_url": null
-      }
-     ],
-     "X0TUX": [
-      {
-       "time": "14:00",
-       "format": "",
-       "ticket_url": "https://booking.mjrtheatres.com/launch/ticketing/fa576d41-b8b4-5d26-9610-37633b0c4e15"
-      },
-      {
-       "time": "16:30",
-       "format": "",
-       "ticket_url": "https://booking.mjrtheatres.com/launch/ticketing/63d88c5a-1ed0-588d-86c9-d1c3bebf81ff"
-      },
-      {
-       "time": "18:55",
-       "format": "",
-       "ticket_url": "https://booking.mjrtheatres.com/launch/ticketing/316da601-961f-5d7d-b011-6864fe2c9922"
-      },
-      {
-       "time": "21:20",
-       "format": "",
-       "ticket_url": "https://booking.mjrtheatres.com/launch/ticketing/31ee04cf-f67d-56fe-a703-6e3d0afcfd10"
-      }
-     ]
-    },
     "2026-11-17": {
      "3674": [
       {
@@ -948,7 +980,7 @@ window.MOVIE_DATA = {
       {
        "time": "11:15",
        "format": "",
-       "ticket_url": "https://booking.mjrtheatres.com/launch/ticketing/cc4af03f-b468-5465-b868-f9b09a2a6d00"
+       "ticket_url": "https://booking.mjrtheatres.com/launch/ticketing/03c81305-647c-5191-9737-f556c111b38b"
       },
       {
        "time": "13:45",
@@ -1005,180 +1037,74 @@ window.MOVIE_DATA = {
     "3674": "https://www.emagine-entertainment.com/movies/godzilla-minus-zero/"
    },
    "showtimes": {
-    "2026-11-10": {
+    "2026-11-17": {
      "3674": [
       {
-       "time": "13:20",
+       "time": "13:40",
        "format": "JapanSub",
        "ticket_url": null
       },
       {
-       "time": "14:45",
-       "format": "JapanSub",
-       "ticket_url": null
-      },
-      {
-       "time": "16:00",
+       "time": "15:45",
        "format": "Emx, JapanSub",
        "ticket_url": null
       },
       {
-       "time": "18:00",
+       "time": "16:45",
        "format": "JapanSub",
        "ticket_url": null
       },
       {
-       "time": "19:00",
-       "format": "Emx, JapanSub",
-       "ticket_url": null
-      },
-      {
-       "time": "21:00",
+       "time": "18:20",
        "format": "JapanSub",
        "ticket_url": null
       },
       {
-       "time": "22:00",
+       "time": "19:45",
+       "format": "JapanSub",
+       "ticket_url": null
+      },
+      {
+       "time": "21:30",
        "format": "Emx, JapanSub",
        "ticket_url": null
       }
      ],
      "X0TUX": [
       {
-       "time": "10:00",
-       "format": "IMAX, Recliners",
-       "ticket_url": "https://booking.mjrtheatres.com/launch/ticketing/d2d0ed2e-98c3-5e14-adbd-ac82f0b57282"
-      },
-      {
-       "time": "13:05",
-       "format": "IMAX, Recliners",
-       "ticket_url": "https://booking.mjrtheatres.com/launch/ticketing/a6f11b69-679f-5019-bf4f-7b0f1fc58353"
-      },
-      {
-       "time": "16:10",
-       "format": "IMAX, Recliners",
-       "ticket_url": "https://booking.mjrtheatres.com/launch/ticketing/2f006bc8-8ded-541a-95d3-780d67947e08"
-      },
-      {
-       "time": "19:20",
-       "format": "IMAX, Recliners",
-       "ticket_url": "https://booking.mjrtheatres.com/launch/ticketing/b923aa37-844b-559c-a32d-b5f0cdd3eec3"
-      },
-      {
-       "time": "20:20",
+       "time": "11:30",
        "format": "",
-       "ticket_url": "https://booking.mjrtheatres.com/launch/ticketing/b465d6e4-b9e3-554a-a44b-bf316b9ce60a"
+       "ticket_url": "https://booking.mjrtheatres.com/launch/ticketing/69fb5038-343a-5c63-a80b-3a85c9391d36"
       },
       {
-       "time": "21:20",
+       "time": "14:45",
        "format": "",
-       "ticket_url": "https://booking.mjrtheatres.com/launch/ticketing/1215932c-9c7d-5705-9afc-4875bb4c2417"
+       "ticket_url": "https://booking.mjrtheatres.com/launch/ticketing/77a9c02b-c291-5687-83ec-3cd47e43c7d7"
       },
       {
-       "time": "22:30",
-       "format": "IMAX, Recliners",
-       "ticket_url": "https://booking.mjrtheatres.com/launch/ticketing/95c32158-6f89-54ea-b877-e507c4c834ca"
-      }
-     ]
-    }
-   }
-  },
-  {
-   "title": "Gremlins (1984)",
-   "details": {
-    "poster": "https://cms-assets.webediamovies.pro/production/275/8cac09b334a3fa5d60d0e9b5e271fdaf.jpg",
-    "synopsis": "A wholesome, All-American town is turned upside-down, when \"gremlins\"--some impish little creatures--are accidentally unleashed and wreck havoc.",
-    "runtime": 105,
-    "genres": [
-     "Fantasy",
-     "Comedy"
-    ],
-    "rating": "PG",
-    "cast": [
-     "Zach Galligan",
-     "Phoebe Cates",
-     "Hoyt Axton",
-     "Frances Lee McCain",
-     "Howie Mandel",
-     "Dick Miller"
-    ],
-    "directors": [
-     "Joe Dante"
-    ],
-    "video": "https://m.boxoffice.media/mp4/10485_high.mp4",
-    "release": "1984-06-01"
-   },
-   "links": {},
-   "showtimes": {
-    "2026-11-10": {
-     "X0TUX": [
+       "time": "18:00",
+       "format": "",
+       "ticket_url": "https://booking.mjrtheatres.com/launch/ticketing/2397a0d7-d8d6-5620-8023-6993c324fdd0"
+      },
       {
        "time": "18:45",
        "format": "",
-       "ticket_url": "https://booking.mjrtheatres.com/launch/ticketing/f6edd9c0-18f1-5943-ac18-c5920147ff7b"
-      }
-     ]
-    }
-   }
-  },
-  {
-   "title": "Heated Rivalry Episode 3 &amp; 4",
-   "details": {
-    "poster": "https://www.emagine-entertainment.com/wp-content/uploads/2026/10/HR_POSTER_FINAL_E34-600x900.jpg",
-    "synopsis": "Episode 3 – “Hunter”: A hockey player’s high-stakes career collides with love when a chance meeting ignites a spark.  \n  Episode 4 – “Rose”: A moment of unexpected vulnerability and a high-profile romance unleash a storm of turmoil for Shane and Ilya.",
-    "runtime": 92,
-    "genres": [
-     "Drama",
-     "Romance"
-    ],
-    "rating": "R",
-    "release": "2026-11-06"
-   },
-   "links": {
-    "3674": "https://www.emagine-entertainment.com/movies/heated-rivalry-episode-3-4/"
-   },
-   "showtimes": {
-    "2026-11-10": {
-     "3674": [
+       "ticket_url": "https://booking.mjrtheatres.com/launch/ticketing/e1ba9a6d-5b5b-5d5e-80f3-e4b753553c28"
+      },
       {
-       "time": "19:00",
+       "time": "20:00",
        "format": "",
-       "ticket_url": null
-      }
-     ]
-    }
-   }
-  },
-  {
-   "title": "Heated Rivalry: Season 01 - Epi 03 & 04",
-   "details": {
-    "poster": "https://cms-assets.webediamovies.pro/production/275/7d69f0a460e86ebcd4129885e705fce8.jpg",
-    "synopsis": "Episode 3 - \"Hunter\": A hockey player’s high-stakes career collides with love when a chance meeting ignites a spark.\n\nEpisode 4 - \"Rose\": A moment of unexpected vulnerability and a high-profile romance unleash a storm of turmoil for Shane and Ilya.",
-    "runtime": 93,
-    "genres": [
-     "Drama",
-     "Romance"
-    ],
-    "rating": "NR",
-    "cast": [
-     "François Arnaud",
-     "Kolton Stewart",
-     "Hudson Williams",
-     "Jay Farrar"
-    ],
-    "directors": [
-     "Jacob Tierney"
-    ],
-    "release": "2026-11-06"
-   },
-   "links": {},
-   "showtimes": {
-    "2026-11-10": {
-     "X0TUX": [
+       "ticket_url": "https://booking.mjrtheatres.com/launch/ticketing/e2a5ca23-5ce9-5fca-a646-0cf1f4bd1735"
+      },
       {
-       "time": "19:00",
+       "time": "21:15",
        "format": "",
-       "ticket_url": "https://booking.mjrtheatres.com/launch/ticketing/c179acae-4ddd-5fb7-9620-db36e43061b2"
+       "ticket_url": "https://booking.mjrtheatres.com/launch/ticketing/ff8aebd1-f6a9-59a2-a774-86592e37b441"
+      },
+      {
+       "time": "22:00",
+       "format": "",
+       "ticket_url": "https://booking.mjrtheatres.com/launch/ticketing/a48220ac-6e08-58ae-bc29-72092bf5e7b0"
       }
      ]
     }
@@ -1391,7 +1317,7 @@ window.MOVIE_DATA = {
   {
    "title": "How to Rob a Bank",
    "details": {
-    "poster": "https://www.emagine-entertainment.com/wp-content/uploads/2026/09/how-to-rob-a-bank-poster.jpg",
+    "poster": "https://www.emagine-entertainment.com/wp-content/uploads/2026/09/HowToRobABank.jpg",
     "synopsis": "In HOW TO ROB A BANK, a crew of social media-savvy bank robbers broadcasts their daring heists, unaware that their growing viral fame has put them in the crosshairs of a veteran FBI agent and a brilliant software engineer. Despite the unlikely duo closing in, the crime ring pushes past their limits, putting everything on the line for their beliefs – and their most ambitious heist yet.",
     "runtime": 121,
     "genres": [
@@ -1552,6 +1478,41 @@ window.MOVIE_DATA = {
    }
   },
   {
+   "title": "Itllu Arjuna",
+   "details": {
+    "poster": "https://all.web.img.acsta.net/img/86/9d/869d05cc9f444c7973b344925daa1d61.jpg",
+    "synopsis": "\"Itllu Arjuna\" follows a mute man with exceptional skills who falls in love, proving that true feelings do not always need words.",
+    "runtime": 157,
+    "genres": [
+     "Action",
+     "Drama",
+     "Romance"
+    ],
+    "rating": "NR",
+    "cast": [
+     "Aniesh Reddy",
+     "Anaswara Rajan",
+     "Brahmaji"
+    ],
+    "directors": [
+     "Mahesh Uppala"
+    ],
+    "release": "2026-10-30"
+   },
+   "links": {},
+   "showtimes": {
+    "2026-11-17": {
+     "X0TUX": [
+      {
+       "time": "21:00",
+       "format": "",
+       "ticket_url": "https://booking.mjrtheatres.com/launch/ticketing/177d4886-f009-5261-a679-30fb785864c2"
+      }
+     ]
+    }
+   }
+  },
+  {
    "title": "Jimmy",
    "details": {
     "poster": "https://cms-assets.webediamovies.pro/production/275/5ff0f7b5019dfd81ab7891778d3c7b0f.jpg",
@@ -1577,69 +1538,85 @@ window.MOVIE_DATA = {
    },
    "links": {},
    "showtimes": {
-    "2026-11-10": {
+    "2026-11-17": {
      "X0TUX": [
       {
        "time": "10:20",
        "format": "",
-       "ticket_url": "https://booking.mjrtheatres.com/launch/ticketing/a39a8c7e-0496-50d8-add8-f1e69786dc50"
+       "ticket_url": "https://booking.mjrtheatres.com/launch/ticketing/349000a9-7488-5348-a93a-5d37f73ec784"
       },
       {
-       "time": "13:15",
+       "time": "13:20",
        "format": "",
-       "ticket_url": "https://booking.mjrtheatres.com/launch/ticketing/edfdd51a-ba94-54d7-896f-811150e1fbda"
+       "ticket_url": "https://booking.mjrtheatres.com/launch/ticketing/77427e6c-027a-503b-96c4-65a95278c181"
       },
       {
-       "time": "16:10",
+       "time": "16:20",
        "format": "",
-       "ticket_url": "https://booking.mjrtheatres.com/launch/ticketing/5dedbfc1-80a3-5493-b901-773f1565b575"
+       "ticket_url": "https://booking.mjrtheatres.com/launch/ticketing/90688919-dd4b-505d-9dc5-c1b4c28409ba"
       },
       {
-       "time": "19:10",
+       "time": "19:15",
        "format": "",
-       "ticket_url": "https://booking.mjrtheatres.com/launch/ticketing/cb157120-1437-5eed-a6f3-dde0d69994be"
+       "ticket_url": "https://booking.mjrtheatres.com/launch/ticketing/1b43a7ed-d613-54c2-b9ec-eb5f87aa0ef2"
       },
       {
        "time": "22:00",
        "format": "",
-       "ticket_url": "https://booking.mjrtheatres.com/launch/ticketing/a658a20b-5fe3-5263-b9c4-6856047ab705"
+       "ticket_url": "https://booking.mjrtheatres.com/launch/ticketing/cad1d60f-b5bc-58be-ac05-319bdfb21595"
       }
      ]
     }
    }
   },
   {
-   "title": "Ken Russell's The Devils",
+   "title": "La bola negra",
    "details": {
-    "poster": "https://all.web.img.acsta.net/img/9d/78/9d7892ebc0ef3a5b4c64c69a63f90b8a.jpg",
-    "synopsis": "An enduring masterpiece of cinema starring Academy Award-winner Vanessa Redgrave and Oliver Reed, Ken Russell's The Devils is a prescient epic of obsession and corruption - and a defining work of art from seminal filmmaker Ken Russell. \n\nAssembled from the original camera negative, this new 4K restoration presents Ken Russell's definitive vision of The Devils by referencing the edit he privately constructed in 2004. Ken Russell's The Devils is the uncut and unfiltered theatrical experience that Russell always envisioned - and the first time the film will be presented restored and in 4k.",
-    "runtime": 103,
+    "poster": "https://all.web.img.acsta.net/img/6a/20/6a20ea8810da65fcbfcdca3e2760d77d.jpg",
+    "synopsis": "From Cannes-winning directors Javier Calvo and Javier Ambrossi - popularly known as Los Javis - La Bola Negra follows three generations of men across pivotal moments in Spanish history, bound by pain, desire, and love. Carlos (Milo Quifes) longs to belong in a fractured Spain. Sebastián (Guitarricadelafuente) finds connection across enemy lines. And Alberto (Carlos González) uncovers a long-buried family secret - one that finally gives voice to truths the past tried to erase.",
+    "runtime": 160,
     "genres": [
      "Drama"
     ],
-    "rating": "NC-17",
+    "rating": "R",
     "cast": [
-     "Vanessa Redgrave",
-     "Oliver Reed",
-     "Dudley Sutton",
-     "Max Adrian",
-     "Gemma Jones",
-     "Murray Melvin"
+     "Guitarricadelafuente",
+     "Miguel Bernardeau",
+     "Carlos González",
+     "Milo Quifes",
+     "Penélope Cruz",
+     "Lola Dueñas"
     ],
     "directors": [
-     "Ken Russell"
+     "Javier Calvo",
+     "Javier Ambrossi"
     ],
-    "video": "https://m.boxoffice.media/mp4/417480_high.mp4",
+    "video": "https://m.boxoffice.media/mp4/392947_high.mp4",
     "release": "2026-10-16"
    },
    "links": {},
    "showtimes": {
-    "2026-11-10": {
+    "2026-11-17": {
      "X0TUX": [
       {
-       "time": "21:30",
+       "time": "10:30",
        "format": "",
-       "ticket_url": "https://booking.mjrtheatres.com/launch/ticketing/f8a6ed9e-355a-5732-820d-b34e8c325f00"
+       "ticket_url": "https://booking.mjrtheatres.com/launch/ticketing/a3ed79c7-b1cf-5776-a332-4225ee06c4f5"
+      },
+      {
+       "time": "14:15",
+       "format": "",
+       "ticket_url": "https://booking.mjrtheatres.com/launch/ticketing/6703cdec-4631-5adb-bd9b-1bacd41421c8"
+      },
+      {
+       "time": "18:00",
+       "format": "",
+       "ticket_url": "https://booking.mjrtheatres.com/launch/ticketing/59ee5004-cc6d-58fb-850d-6585e8cc7942"
+      },
+      {
+       "time": "21:45",
+       "format": "",
+       "ticket_url": "https://booking.mjrtheatres.com/launch/ticketing/e19a2dea-ea76-582b-a943-b0202ba12303"
       }
      ]
     }
@@ -1715,172 +1692,22 @@ window.MOVIE_DATA = {
    },
    "links": {},
    "showtimes": {
-    "2026-11-10": {
+    "2026-11-17": {
      "X0TUX": [
       {
-       "time": "12:00",
+       "time": "11:45",
        "format": "",
-       "ticket_url": "https://booking.mjrtheatres.com/launch/ticketing/6399287f-56f3-5ac8-9245-e2344bd58006"
+       "ticket_url": "https://booking.mjrtheatres.com/launch/ticketing/963f8683-4c4a-55d0-92d1-c7f9397bb6ff"
       },
       {
        "time": "16:00",
        "format": "",
-       "ticket_url": "https://booking.mjrtheatres.com/launch/ticketing/ebb0ba88-ad1c-585f-9d58-8e6449dbc37e"
+       "ticket_url": "https://booking.mjrtheatres.com/launch/ticketing/430c6ce8-58ca-507b-b51d-729a41080528"
       },
       {
-       "time": "18:00",
-       "format": "",
-       "ticket_url": "https://booking.mjrtheatres.com/launch/ticketing/dfda225f-824f-5dfb-8e5f-5c5ac5126f08"
-      },
-      {
-       "time": "20:00",
+       "time": "20:15",
        "format": "3D",
-       "ticket_url": "https://booking.mjrtheatres.com/launch/ticketing/fc4e27e3-8b31-5bbd-aea1-96e21cac4252"
-      }
-     ]
-    }
-   }
-  },
-  {
-   "title": "Resident Evil",
-   "details": {
-    "poster": "https://www.emagine-entertainment.com/wp-content/uploads/2026/07/ResidentEvilPLF-600x889.jpg",
-    "synopsis": "From the mind of visionary filmmaker Zach Cregger (Weapons, Barbarian) comes a thrilling — and terrifying — reinvention of the Resident Evil franchise. \n In an all-new story, Resident Evil follows Bryan (Austin Abrams), a medical courier who unwittingly finds himself in an action-packed, non-stop race for survival as one fateful, horrifying night collapses around him in chaos.",
-    "runtime": 90,
-    "genres": [
-     "Horror"
-    ],
-    "rating": "R",
-    "youtube": "hmJ7moPsdtk",
-    "release": "2026-09-18",
-    "cast": [
-     "Austin Abrams",
-     "Paul Walter Hauser",
-     "Zach Cherry",
-     "Kali Reis",
-     "Will Merrick",
-     "Johnno Wilson"
-    ],
-    "directors": [
-     "Zach Cregger"
-    ],
-    "video": "https://m.boxoffice.media/mp4/385364_high.mp4"
-   },
-   "links": {
-    "3674": "https://www.emagine-entertainment.com/movies/resident-evil/"
-   },
-   "showtimes": {
-    "2026-11-10": {
-     "3674": [
-      {
-       "time": "16:00",
-       "format": "",
-       "ticket_url": null
-      },
-      {
-       "time": "21:35",
-       "format": "",
-       "ticket_url": null
-      }
-     ],
-     "X0TUX": [
-      {
-       "time": "16:20",
-       "format": "",
-       "ticket_url": "https://booking.mjrtheatres.com/launch/ticketing/ba2846fe-fc72-51fc-9f59-9537cd67e8d5"
-      },
-      {
-       "time": "22:00",
-       "format": "",
-       "ticket_url": "https://booking.mjrtheatres.com/launch/ticketing/3d0815d0-4add-5fda-a960-ab4853d9340a"
-      }
-     ]
-    }
-   }
-  },
-  {
-   "title": "Scene",
-   "details": {
-    "poster": "https://all.web.img.acsta.net/img/ab/7c/ab7ce86a38ee9841e9776834e21e4ffd.jpg",
-    "synopsis": "Inbaraj, a police officer, is forced to reopen a case he left unfinished years ago. This time, he must solve it with a chaotic and troublesome team. As they struggle to work together and deal with the twists and turns of the case, the investigation takes them on a chaotic and unpredictable ride.",
-    "runtime": 153,
-    "genres": [
-     "Action",
-     "Comedy",
-     "Drama",
-     "Thriller"
-    ],
-    "rating": "NR",
-    "cast": [
-     "Suriya Sivakumar",
-     "Nazriya Nazim",
-     "Naslen",
-     "Jyotika Sadanah",
-     "Silambarasan TR",
-     "Anandaraj"
-    ],
-    "directors": [
-     "Jithu Madhavan"
-    ],
-    "release": "2026-11-06"
-   },
-   "links": {},
-   "showtimes": {
-    "2026-11-10": {
-     "X0TUX": [
-      {
-       "time": "10:45",
-       "format": "",
-       "ticket_url": "https://booking.mjrtheatres.com/launch/ticketing/dbadfe79-8f23-55ca-9f12-47c8301b86ff"
-      },
-      {
-       "time": "22:00",
-       "format": "",
-       "ticket_url": "https://booking.mjrtheatres.com/launch/ticketing/bccd2af0-1568-552c-99e5-9037c8f7b362"
-      }
-     ]
-    }
-   }
-  },
-  {
-   "title": "Sense and Sensibility",
-   "details": {
-    "poster": "https://all.web.img.acsta.net/img/c7/a3/c7a3ea88a9762a0c18a9bcb9d7a6da96.jpg",
-    "synopsis": "From Focus Features and Working Title comes an irresistible new take on Jane Austen’s iconic Sense and Sensibility: a charming, witty, and deeply relatable story of love and sisterhood starring Daisy Edgar-Jones and Esmé Creed-Miles.",
-    "runtime": 132,
-    "genres": [
-     "Drama",
-     "Romance",
-     "Historical"
-    ],
-    "rating": "PG",
-    "cast": [
-     "Daisy Edgar-Jones",
-     "Esmé Creed-Miles",
-     "Caitriona Balfe",
-     "Frank Dillane",
-     "Herbert Nordrum",
-     "Bodhi Rae Breathnach"
-    ],
-    "directors": [
-     "Georgia Oakley"
-    ],
-    "video": "https://m.boxoffice.media/mp4/395156_high.mp4",
-    "release": "2026-10-16"
-   },
-   "links": {},
-   "showtimes": {
-    "2026-11-10": {
-     "X0TUX": [
-      {
-       "time": "11:20",
-       "format": "",
-       "ticket_url": "https://booking.mjrtheatres.com/launch/ticketing/26d4f972-0f3a-5876-aa4f-59de27347d7f"
-      },
-      {
-       "time": "14:35",
-       "format": "",
-       "ticket_url": "https://booking.mjrtheatres.com/launch/ticketing/c7dd1aaa-7676-53a2-ae86-a3e96c21f232"
+       "ticket_url": "https://booking.mjrtheatres.com/launch/ticketing/5ca9c7fc-bdeb-5519-8bb4-64a71c7be37d"
       }
      ]
     }
@@ -1904,15 +1731,10 @@ window.MOVIE_DATA = {
     "3674": "https://www.emagine-entertainment.com/movies/street-fighter/"
    },
    "showtimes": {
-    "2026-11-10": {
+    "2026-11-17": {
      "3674": [
       {
-       "time": "13:40",
-       "format": "",
-       "ticket_url": null
-      },
-      {
-       "time": "22:00",
+       "time": "15:30",
        "format": "",
        "ticket_url": null
       }
@@ -1952,16 +1774,16 @@ window.MOVIE_DATA = {
     "3674": "https://www.emagine-entertainment.com/movies/the-cat-in-the-hat/"
    },
    "showtimes": {
-    "2026-11-10": {
+    "2026-11-17": {
      "3674": [
       {
        "time": "13:00",
-       "format": "Emx",
+       "format": "",
        "ticket_url": null
       },
       {
-       "time": "15:15",
-       "format": "",
+       "time": "13:50",
+       "format": "3D",
        "ticket_url": null
       },
       {
@@ -1970,18 +1792,13 @@ window.MOVIE_DATA = {
        "ticket_url": null
       },
       {
-       "time": "18:00",
+       "time": "19:15",
        "format": "",
        "ticket_url": null
       },
       {
-       "time": "19:30",
+       "time": "21:20",
        "format": "",
-       "ticket_url": null
-      },
-      {
-       "time": "20:45",
-       "format": "3D",
        "ticket_url": null
       }
      ],
@@ -1989,37 +1806,32 @@ window.MOVIE_DATA = {
       {
        "time": "10:00",
        "format": "",
-       "ticket_url": "https://booking.mjrtheatres.com/launch/ticketing/d8edc56c-0788-51c6-8102-f25441c13de4"
+       "ticket_url": "https://booking.mjrtheatres.com/launch/ticketing/56922ed6-fe4a-5ed1-a5bd-b971adcc558e"
       },
       {
-       "time": "11:00",
-       "format": "",
-       "ticket_url": "https://booking.mjrtheatres.com/launch/ticketing/43c235be-35b6-5e2a-b3fb-32f5f5d0e43b"
-      },
-      {
-       "time": "13:00",
-       "format": "",
-       "ticket_url": "https://booking.mjrtheatres.com/launch/ticketing/873e36cf-b0da-527a-ae19-e19609dee87f"
-      },
-      {
-       "time": "13:40",
+       "time": "12:40",
        "format": "3D",
-       "ticket_url": "https://booking.mjrtheatres.com/launch/ticketing/fc89ffa9-e0b5-5779-93e5-aa20c8a503b4"
+       "ticket_url": "https://booking.mjrtheatres.com/launch/ticketing/8ba3a4cf-6a65-556e-a88e-5fd12cc236b7"
       },
       {
-       "time": "16:20",
+       "time": "13:45",
        "format": "",
-       "ticket_url": "https://booking.mjrtheatres.com/launch/ticketing/df8fec67-2dc6-5c78-a226-b54f5e7fb55d"
+       "ticket_url": "https://booking.mjrtheatres.com/launch/ticketing/b3754bb8-e7b8-5964-94b8-2b3cb5d92e17"
       },
       {
-       "time": "19:00",
+       "time": "16:30",
        "format": "",
-       "ticket_url": "https://booking.mjrtheatres.com/launch/ticketing/de4a585c-e37e-5212-bb33-0bf1b554be35"
+       "ticket_url": "https://booking.mjrtheatres.com/launch/ticketing/ac5b610d-c744-5613-bd43-09e6477b95d1"
       },
       {
-       "time": "21:40",
+       "time": "19:15",
        "format": "",
-       "ticket_url": "https://booking.mjrtheatres.com/launch/ticketing/ddb42414-5ed6-544a-94df-eb97494bf080"
+       "ticket_url": "https://booking.mjrtheatres.com/launch/ticketing/d66f25c4-7886-5ded-b1a8-557eaf073fc2"
+      },
+      {
+       "time": "22:00",
+       "format": "",
+       "ticket_url": "https://booking.mjrtheatres.com/launch/ticketing/1469be6b-ed7b-5e72-b10b-e64055c5f7a0"
       }
      ]
     }
@@ -2159,88 +1971,83 @@ window.MOVIE_DATA = {
    }
   },
   {
-   "title": "The Only Living Pickpocket in New York",
+   "title": "Violent Night 2",
    "details": {
-    "poster": "https://www.emagine-entertainment.com/wp-content/uploads/2026/10/the-only-living-pickpocket-in-new-york-poster-600x889.jpg",
-    "synopsis": "Harry Lehman (John Turturro) is an aging pickpocket who plies his trade with ever-diminishing returns in a drastically changed New York. Wallets stuffed with cash have been replaced by easily cancelled credit cards, and Harry struggles to make ends meet as he cares for his disabled wife, Rosie. When he unwittingly purloins and fences a valuable USB stick, Harry finds himself in a race against time to return the loot or face the rage of a vengeful crime family.",
-    "runtime": 88,
+    "poster": "https://www.emagine-entertainment.com/wp-content/uploads/2026/10/ViolentNight2-600x750.jpg",
+    "synopsis": "Stranded in a crumbling New Jersey mall and cut off from the North Pole, Santa Claus is trapped dishing out violent justice to a ruthless Crime Lord and his henchmen overrunning the town’s mall.",
+    "runtime": 110,
     "genres": [
-     "Crime",
-     "Drama",
-     "Thriller"
+     "Action",
+     "Comedy"
     ],
     "rating": "R",
-    "youtube": "iXA7BmrBBxs",
-    "release": "2026-10-30",
+    "youtube": "FmM2giDwLAE",
+    "release": "2026-12-04",
     "cast": [
-     "John Turturro",
-     "Steve Buscemi",
-     "Giancarlo Esposito",
-     "Will Price",
-     "Tatiana Maslany",
-     "Victoria Moroles"
+     "David Harbour",
+     "Kristen Bell",
+     "Daniela Melchior",
+     "Jared Harris",
+     "Joe Pantoliano",
+     "Maxwell Jacob Friedman"
     ],
     "directors": [
-     "Noah Segan"
-    ]
+     "Tommy Wirkola"
+    ],
+    "video": "https://m.boxoffice.media/mp4/394392_high.mp4"
    },
    "links": {
-    "3674": "https://www.emagine-entertainment.com/movies/the-only-living-pickpocket-in-new-york/"
+    "3674": "https://www.emagine-entertainment.com/movies/violent-night-2/"
    },
    "showtimes": {
-    "2026-11-10": {
+    "2026-12-08": {
      "3674": [
       {
-       "time": "14:00",
+       "time": "14:15",
        "format": "",
        "ticket_url": null
       },
       {
-       "time": "21:25",
+       "time": "17:00",
        "format": "",
+       "ticket_url": null
+      },
+      {
+       "time": "19:15",
+       "format": "Emx",
+       "ticket_url": null
+      },
+      {
+       "time": "21:45",
+       "format": "Emx",
        "ticket_url": null
       }
      ],
      "X0TUX": [
       {
-       "time": "17:15",
+       "time": "10:30",
        "format": "",
-       "ticket_url": "https://booking.mjrtheatres.com/launch/ticketing/6bb8bc76-d8e4-5e0a-a08e-88b5c3b36384"
-      }
-     ]
-    }
-   }
-  },
-  {
-   "title": "Verity",
-   "details": {
-    "poster": "https://www.emagine-entertainment.com/wp-content/uploads/2026/09/VerityPLF-600x889.jpg",
-    "synopsis": "Adapted from Colleen Hoover’s best-selling novel, this seductive, psychological thriller follows renowned author Verity Crawford (Anne Hathaway) and Lowen Ashleigh (Dakota Johnson), a struggling writer who relocates to the remote Crawford estate to ghostwrite for Verity. After Lowen uncovers what appears to be Verity’s chilling autobiographical notes, she wrestles with the disturbing and twisted confessions about Verity’s husband Jeremy (Josh Hartnett), and finds it hard to separate fiction from reality, manipulation from attraction, and opportunity from obsession.",
-    "runtime": 114,
-    "genres": [
-     "Crime",
-     "Drama",
-     "Thriller"
-    ],
-    "rating": "R",
-    "youtube": "xdPMKhjMSFs",
-    "release": "2026-10-02"
-   },
-   "links": {
-    "3674": "https://www.emagine-entertainment.com/movies/verity/"
-   },
-   "showtimes": {
-    "2026-11-10": {
-     "3674": [
-      {
-       "time": "16:45",
-       "format": "",
-       "ticket_url": null
+       "ticket_url": "https://booking.mjrtheatres.com/launch/ticketing/8080977f-7890-5a08-b989-7863563ff103"
       },
       {
-       "time": "19:20",
+       "time": "13:15",
        "format": "",
-       "ticket_url": null
+       "ticket_url": "https://booking.mjrtheatres.com/launch/ticketing/09910961-a86e-56a4-b8f3-118d0ae06317"
+      },
+      {
+       "time": "16:00",
+       "format": "",
+       "ticket_url": "https://booking.mjrtheatres.com/launch/ticketing/af48fd51-fa09-5d2f-8da0-233fcc8b5e9c"
+      },
+      {
+       "time": "18:45",
+       "format": "",
+       "ticket_url": "https://booking.mjrtheatres.com/launch/ticketing/997479ef-78b0-52db-890b-aaffb5d7131b"
+      },
+      {
+       "time": "21:30",
+       "format": "",
+       "ticket_url": "https://booking.mjrtheatres.com/launch/ticketing/255a547a-ce75-5faf-b7f0-e105e7534f11"
       }
      ]
     }
@@ -2278,49 +2085,19 @@ window.MOVIE_DATA = {
     "3674": "https://www.emagine-entertainment.com/movies/wicker-2/"
    },
    "showtimes": {
-    "2026-11-10": {
+    "2026-11-17": {
      "3674": [
       {
-       "time": "13:10",
-       "format": "",
-       "ticket_url": null
-      },
-      {
-       "time": "15:45",
-       "format": "",
-       "ticket_url": null
-      },
-      {
-       "time": "18:10",
-       "format": "",
-       "ticket_url": null
-      },
-      {
-       "time": "20:50",
+       "time": "21:40",
        "format": "",
        "ticket_url": null
       }
      ],
      "X0TUX": [
       {
-       "time": "13:00",
+       "time": "15:20",
        "format": "",
-       "ticket_url": "https://booking.mjrtheatres.com/launch/ticketing/8ec573a1-7c09-5264-b4ce-def9e3db2e8a"
-      },
-      {
-       "time": "15:45",
-       "format": "",
-       "ticket_url": "https://booking.mjrtheatres.com/launch/ticketing/d32cd4ad-7107-5d69-b269-3c280a4ad905"
-      },
-      {
-       "time": "18:30",
-       "format": "",
-       "ticket_url": "https://booking.mjrtheatres.com/launch/ticketing/60ba093b-6c0f-5797-a649-8c9ee31a79b2"
-      },
-      {
-       "time": "21:15",
-       "format": "",
-       "ticket_url": "https://booking.mjrtheatres.com/launch/ticketing/bf6da8e8-7fba-5ed5-ae87-70dad675180c"
+       "ticket_url": "https://booking.mjrtheatres.com/launch/ticketing/bfa3c591-dd29-537b-a84e-2f90210cd5db"
       }
      ]
     }
@@ -2357,54 +2134,54 @@ window.MOVIE_DATA = {
     "3674": "https://www.emagine-entertainment.com/movies/wild-horse-nine/"
    },
    "showtimes": {
-    "2026-11-10": {
+    "2026-11-17": {
      "3674": [
       {
-       "time": "13:50",
+       "time": "13:00",
        "format": "",
        "ticket_url": null
       },
       {
-       "time": "16:30",
+       "time": "15:45",
        "format": "",
        "ticket_url": null
       },
       {
-       "time": "19:10",
+       "time": "18:30",
        "format": "",
        "ticket_url": null
       },
       {
-       "time": "21:55",
+       "time": "21:25",
        "format": "",
        "ticket_url": null
       }
      ],
      "X0TUX": [
       {
-       "time": "10:20",
+       "time": "10:10",
        "format": "",
-       "ticket_url": "https://booking.mjrtheatres.com/launch/ticketing/437ed077-30eb-5a6c-8c02-bf2346106123"
+       "ticket_url": "https://booking.mjrtheatres.com/launch/ticketing/6e18e73e-7a0c-5b23-bdfb-7d021eaa92c3"
       },
       {
-       "time": "13:10",
+       "time": "13:00",
        "format": "",
-       "ticket_url": "https://booking.mjrtheatres.com/launch/ticketing/e28555b7-11d9-55cb-b8fe-328c7fb72e2b"
+       "ticket_url": "https://booking.mjrtheatres.com/launch/ticketing/fb3dac7e-6f7b-59fd-9125-c3ff194e99d2"
       },
       {
-       "time": "16:05",
+       "time": "15:50",
        "format": "",
-       "ticket_url": "https://booking.mjrtheatres.com/launch/ticketing/abdd3d89-4ff7-5486-9904-4ed97b5f6dfc"
+       "ticket_url": "https://booking.mjrtheatres.com/launch/ticketing/1107eff4-8c9a-5e8c-9fc0-3cd738be15e9"
       },
       {
-       "time": "18:55",
+       "time": "18:45",
        "format": "",
-       "ticket_url": "https://booking.mjrtheatres.com/launch/ticketing/d768b7a5-7c75-5f57-992e-d7be7593817f"
+       "ticket_url": "https://booking.mjrtheatres.com/launch/ticketing/e1a50c70-5c87-5dbb-934e-3dc90be375c1"
       },
       {
-       "time": "21:45",
+       "time": "21:40",
        "format": "",
-       "ticket_url": "https://booking.mjrtheatres.com/launch/ticketing/0cb19239-b84f-5738-b28e-ee9110d87303"
+       "ticket_url": "https://booking.mjrtheatres.com/launch/ticketing/e199bfd5-ab1d-5cf0-95ca-d9ee2c03b2ed"
       }
      ]
     }
@@ -2441,7 +2218,7 @@ window.MOVIE_DATA = {
     "3674": "https://www.emagine-entertainment.com/movies/wildwood/"
    },
    "showtimes": {
-    "2026-11-10": {
+    "2026-11-17": {
      "3674": [
       {
        "time": "13:05",
@@ -2454,36 +2231,36 @@ window.MOVIE_DATA = {
        "ticket_url": null
       },
       {
-       "time": "18:20",
+       "time": "18:10",
        "format": "",
        "ticket_url": null
       },
       {
-       "time": "21:20",
+       "time": "21:10",
        "format": "",
        "ticket_url": null
       }
      ],
      "X0TUX": [
       {
-       "time": "11:30",
+       "time": "11:45",
        "format": "",
-       "ticket_url": "https://booking.mjrtheatres.com/launch/ticketing/8ae2aca5-eb0d-55e9-b1af-758501cfc514"
+       "ticket_url": "https://booking.mjrtheatres.com/launch/ticketing/d22c0dcd-ff33-517c-9382-599d5b6dd569"
       },
       {
-       "time": "14:45",
+       "time": "15:00",
        "format": "",
-       "ticket_url": "https://booking.mjrtheatres.com/launch/ticketing/6e6b6aba-147c-5402-a27c-501da66c075d"
+       "ticket_url": "https://booking.mjrtheatres.com/launch/ticketing/8de4822d-9357-53ff-b3b0-e0d2651cc7e4"
       },
       {
-       "time": "18:30",
+       "time": "18:15",
        "format": "",
-       "ticket_url": "https://booking.mjrtheatres.com/launch/ticketing/92cd83bc-dd0c-54c7-8bbb-e3c46314700a"
+       "ticket_url": "https://booking.mjrtheatres.com/launch/ticketing/9d04f65a-8d32-5ec6-8552-62b7ecfabf6a"
       },
       {
-       "time": "21:45",
+       "time": "21:25",
        "format": "",
-       "ticket_url": "https://booking.mjrtheatres.com/launch/ticketing/d0b073d3-0e25-5e04-8cde-71e688c03d6d"
+       "ticket_url": "https://booking.mjrtheatres.com/launch/ticketing/343ecc3d-a44a-553d-996c-48ae7a8fda03"
       }
      ]
     }
@@ -2520,20 +2297,25 @@ window.MOVIE_DATA = {
     "3674": "https://www.emagine-entertainment.com/movies/you-can-see-everything/"
    },
    "showtimes": {
-    "2026-11-10": {
+    "2026-11-17": {
      "3674": [
       {
-       "time": "13:30",
+       "time": "13:15",
        "format": "",
        "ticket_url": null
       },
       {
-       "time": "17:15",
+       "time": "17:00",
        "format": "",
        "ticket_url": null
       },
       {
-       "time": "21:10",
+       "time": "19:00",
+       "format": "",
+       "ticket_url": null
+      },
+      {
+       "time": "20:45",
        "format": "",
        "ticket_url": null
       }
@@ -2542,17 +2324,17 @@ window.MOVIE_DATA = {
       {
        "time": "11:30",
        "format": "",
-       "ticket_url": "https://booking.mjrtheatres.com/launch/ticketing/cd6960eb-cfc0-519b-b2af-b24ee9ae948f"
+       "ticket_url": "https://booking.mjrtheatres.com/launch/ticketing/11c3c2f8-5a56-5417-8463-9c1e4228d505"
       },
       {
        "time": "15:30",
        "format": "",
-       "ticket_url": "https://booking.mjrtheatres.com/launch/ticketing/c5a10dd3-47f2-5c4d-a34c-e37f9ca018f9"
+       "ticket_url": "https://booking.mjrtheatres.com/launch/ticketing/db131235-f3a5-5874-b908-a59238a10916"
       },
       {
        "time": "19:30",
        "format": "",
-       "ticket_url": "https://booking.mjrtheatres.com/launch/ticketing/7ffe1cec-798d-5da9-841d-d601b9706be0"
+       "ticket_url": "https://booking.mjrtheatres.com/launch/ticketing/354346a5-f32a-5122-a79c-9224ddbecdcd"
       }
      ]
     }
